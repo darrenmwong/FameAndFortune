@@ -1,0 +1,16 @@
+*.log
+*.pid
+*.seed
+.archive
+.grunt
+.lock-wscript
+.sass-cache/
+bower_components/
+build
+coverage
+index.lock
+lib-cov
+logs
+node_modules
+pids
+
