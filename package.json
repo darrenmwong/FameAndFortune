@@ -1,44 +1,45 @@
 {
-  "name": "FameAndFortune",
-  "version": "0.0.0",
-  "description": "> Playground.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "fameandfortune",
+  "description": "E.g. Seed project to get started with Famo.us.",
+  "version": "0.1.0",
+  "homepage": "https://github.com//fameandfortune",
+  "author": {
+    "name": "darrenmwong",
+    "url": "http://github.com//"
   },
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/darrenmwong/FameAndFortune.git"
+    "url": "git://github.com//fameandfortune.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/darrenmwong/FameAndFortune/issues"
+    "url": "https://github.com//fameandfortune/issues"
   },
-  "homepage": "https://github.com/darrenmwong/FameAndFortune",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "devDependencies": {
-    "browser-sync": "^0.9.1",
-    "gulp": "^3.6.2",
-    "gulp-bower-files": "^0.2.3",
-    "gulp-cache": "^0.1.11",
-    "gulp-clean": "^0.2.4",
-    "gulp-csso": "^0.2.8",
-    "gulp-filter": "^0.4.1",
-    "gulp-flatten": "^0.0.2",
-    "gulp-jshint": "^1.6.1",
-    "gulp-load-plugins": "^0.5.1",
-    "gulp-notify": "^1.2.6",
-    "gulp-plumber": "^0.6.1",
-    "gulp-sass": "^0.7.1",
-    "gulp-uglify": "^0.3.0",
-    "gulp-size": "^0.3.1",
-    "gulp-useref": "^0.4.3",
-    "gulp-util": "^2.2.14",
-    "jshint-stylish": "^0.2.0",
-    "opn": "^0.1.2",
-    "wiredep": "^1.7.0",
-    "gulp-autoprefixer": "^0.0.7",
-    "gulp-imagemin": "^0.5.0",
-    "streamqueue": "^0.1.0"
+    "famous-metrics": "^0.1.1",
+    "grunt": "~0.4.4",
+    "grunt-bower-requirejs": "^2.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.12.1",
+    "grunt-contrib-htmlmin": "^0.4.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-eslint": "^6.0.0",
+    "grunt-jscs": "^1.0.0",
+    "grunt-processhtml": "^0.3.3",
+    "grunt-rev": "^0.1.0",
+    "grunt-usemin": "^3.0.0",
+    "load-grunt-config": "^0.16.0",
+    "time-grunt": "^1.0.0"
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }

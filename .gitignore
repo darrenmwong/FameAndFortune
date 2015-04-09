@@ -1,17 +1,21 @@
-*.log
-*.pid
-*.seed
-.archive
-.grunt
-.lock-wscript
-.sass-cache/
-bower_components/
-node_modules/
-build
-coverage
-index.lock
-lib-cov
-logs
-node_modules
-pids
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
 
+# Node Files #
+##############
+node_modules
+
+# Logs #
+########
+*.log
+
+# Project Files #
+#################
+dist
+.tmp
+app/lib
+.yo-rc.json
