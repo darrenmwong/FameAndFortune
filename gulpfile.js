@@ -1,5 +1,4 @@
 'use strict';
-// generated on 2015-04-08 using generator-gulp-foundation 0.0.3
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
@@ -10,17 +9,17 @@ var gutil = require('gulp-util');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('/src/stylesheets/main.scss')
+    return gulp.src('src/stylesheets/main.scss')
         .pipe($.sass({errLogToConsole: true}))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('static/stylesheets'))
+        .pipe(gulp.dest('src/stylesheets'))
         .pipe(reload({stream:true}))
         .pipe($.size())
         .pipe($.notify("Compilation complete."));;
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('/src/javascripts/*.js')
+    return gulp.src('src/javascripts/*.js')
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
@@ -45,13 +44,13 @@ gulp.task('html', ['styles', 'scripts'], function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('src/images/*')
+    return gulp.src('/src/images/*')
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('static/images'))
+        .pipe(gulp.dest('/static/images'))
         .pipe(reload({stream:true, once:true}))
         .pipe($.size());
 });
@@ -100,7 +99,7 @@ gulp.task('wiredep', function () {
 gulp.task('watch', ['serve'], function () {
  
     // watch for changes
-    gulp.watch(['*.html'], reload);
+    gulp.watch(['src/*.html'], reload);
  
     gulp.watch('src/stylesheets/*.scss', ['styles']);
     gulp.watch('src/javascripts/*.js', ['scripts']);
