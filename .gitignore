@@ -6,6 +6,7 @@
 .lock-wscript
 .sass-cache/
 bower_components/
+node_modules/
 build
 coverage
 index.lock
