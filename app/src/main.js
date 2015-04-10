@@ -8,34 +8,35 @@ define(function(require, exports, module) {
 
     var colors = [
         'lightgrey',
-        'black',
-
+        'red'
     ];
 
     var initialRatios = [0, 1];
 
     var flex = new FlexibleLayout({
-        ratios : initialRatios
+        ratios: initialRatios
     });
 
     var surfaces = [];
     for (var i = 1; i < 3; i++) {
-        size = [undefined, undefined]
+        var size = [undefined, undefined];
         surfaces.push(new Surface({
             size: size,
+            content: '<h1>Surface ' + i + '</h1>',
             properties: {
-                backgroundColor: colors[i-1]
+                backgroundColor: colors[i-1],
+                textAlign: 'center'
             }
         }));
     }
 
     flex.sequenceFrom(surfaces);
 
-    var finalRatios = [3, 7];
+    var finalRatios = [9, 1];
     var toggle = false;
-    Engine.on('click', function(){
+    Engine.on('click', function() {
         var ratios = toggle ? initialRatios : finalRatios;
-        flex.setRatios(ratios, {curve : 'easeOut', duration : 500});
+        flex.setRatios(ratios, {curve: 'easeOut', duration: 500});
         toggle = !toggle;
     });
 
